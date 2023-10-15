@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode production",
-    "start": "webpack --mode development"
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   },
   "keywords": [],
   "author": "",

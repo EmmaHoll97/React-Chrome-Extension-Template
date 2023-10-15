@@ -64,7 +64,7 @@ module.exports = () => {
                 patterns: [
                     { from: './src/assets', to: 'assets' },
                     { from: './manifest.json', to: 'manifest.json' },
-                    { from: './src/popup.html', to: 'popup.html' },
+                    { from: './src/popup/popup.html', to: 'popup.html' },
                 ],
             }),
             new Dotenv({
