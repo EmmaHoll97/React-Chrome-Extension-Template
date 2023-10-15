@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "My React Extension",
+    "version": "1.0",
+    "description": "A simple React-based Chrome extension",
+    "permissions": [
+        "activeTab",
+        "<all_urls>",
+        "host",
+        "storage",
+        "tabs",
+        "unlimatedStorage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/images/smile.png",
+            "48": "assets/images/smile.png",
+            "128": "assets/images/smile.png"
+        }
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/images/smile.png",
+            "48": "assets/images/smile.png",
+            "128": "assets/images/smile.png"
+        }
+    },
+    "icons": {
+        "16": "assets/images/smile.png",
+        "48": "assets/images/smile.png",
+        "128": "assets/images/smile.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "all_frames": true,
+            "match_about_blank": true
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
